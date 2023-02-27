@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="com.dilki.fashionbugtestproject.RegisterTest" time="66.258" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.dilki.fashionbugtestproject.RegisterTest" time="60.883" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="18.0.2.1+1-1"/>
@@ -61,22 +61,5 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.dilki.fashionbugtestproject.RegisterTest" name="com.dilki.fashionbugtestproject.RegisterTest.testRegisterMembers" time="66.258">
-    <failure message="The test case is a prototype." type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: The test case is a prototype.
-	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:39)
-	at org.junit.jupiter.api.Assertions.fail(Assertions.java:109)
-	at com.dilki.fashionbugtestproject.RegisterTest.testRegisterMembers(RegisterTest.java:28)
-</failure>
-    <system-out>registerMembers
-Insert Failed
-</system-out>
-    <system-err>Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 42381
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1677420709.010][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
-Feb 26, 2023 7:41:52 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-</system-err>
-  </testcase>
+  <testcase classname="com.dilki.fashionbugtestproject.RegisterTest" name="com.dilki.fashionbugtestproject.RegisterTest.testRegisterMembers" time="60.883"/>
 </testsuite>

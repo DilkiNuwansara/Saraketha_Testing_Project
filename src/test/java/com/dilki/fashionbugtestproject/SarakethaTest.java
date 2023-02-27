@@ -11,9 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author DELL
  */
-public class RegisterTest {
+public class SarakethaTest {
     
-    public RegisterTest() {
+    public SarakethaTest() {
     }
 
     /**
@@ -21,11 +21,13 @@ public class RegisterTest {
      */
     @org.junit.jupiter.api.Test
     public void testRegisterMembers() {
-        System.out.println("registerMembers");
+        
         Register instance = new Register();
-        instance.registerMembers();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        boolean status = instance.registerMembers();
+        
+        assertTrue(status);
+       
+       
     }
     
 }

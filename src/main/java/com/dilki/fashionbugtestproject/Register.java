@@ -22,13 +22,16 @@ import org.openqa.selenium.interactions.Actions;
  * @author DELL
  */
 public class Register {
-    public void registerMembers(){
+    public boolean registerMembers(){
+        
+        boolean status = false;
+        
         DBConnection con = new DBConnection();
         Connection conn = con.connect();
 
         String inputFirstname = "Adithya";
         String inputLastName = "Saranga";
-        String inputEmail = "Butamene@fleckens.hu";
+        String inputEmail = "Tepen1972@rhyta.com";
         String inputPassword = "12345";
 
         System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
@@ -76,8 +79,11 @@ public class Register {
             System.out.println("first if success");
             List<WebElement> myAccountElement = driver.findElements(By.cssSelector("a[href='/account']"));
             
+            
             if (!myAccountElement.isEmpty()) {
                 System.out.println("Successfully insert");
+                status = true;
+                
                 try {
                     PreparedStatement insertMembersStmt = conn.prepareStatement("insert into registerdemembers values(?,?,?,?)");
                     insertMembersStmt.setString(1, inputFirstname);
@@ -85,16 +91,21 @@ public class Register {
                     insertMembersStmt.setString(3, inputEmail);
                     insertMembersStmt.setString(4, inputPassword);
                     insertMembersStmt.execute();
+                   
 
                 } catch (SQLException ex) {
                     Logger.getLogger(FashionBugTestProject.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }else{
+                status = false;
                 System.out.println("array size : " +myAccountElement.size() );
             }
 
         } else {
-            System.out.println("Insert Failed");
+            status = false;
+            System.out.println("Register Failed");
         }
+        driver.close();
+        return status;
     } 
 }
